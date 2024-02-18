@@ -46,14 +46,43 @@ loader.load(
   }
 );
 
+function updateLoadingBar(percent) {
+  document.getElementById('loadingBar').style.width = percent + '%';
+}
+
+// Example: Simulate loading progress
+let progress = 0;
+const interval = setInterval(() => {
+  progress += 10;
+  updateLoadingBar(progress);
+  if (progress >= 100) {
+    clearInterval(interval);
+    // Hide the loading bar or do something else after loading is complete
+    document.getElementById('loadingBar').style.display = 'none';
+  }
+}, 1000);
+
 //Instantiate a new renderer and set its size
 const renderer = new THREE.WebGLRenderer({ alpha: true }); //Alpha: true allows for the transparent background
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.shadowMap.enabled = true; // Enable shadow mapping
 renderer.shadowMap.type = THREE.PCFSoftShadowMap; // PCFSoftShadowMap for softer edges
 
-//Add the renderer to the DOM
+function completeLoading() {
+  // Set loading bar to 100%
+  document.getElementById('loadingBar').style.width = '100%';
+
+  // Optionally, wait a bit before hiding the loading bar to ensure users see it has completed
+  setTimeout(() => {
+    document.getElementById('loadingBar').style.display = 'none';
+  }, 500); // Adjust the timeout as needed
+}
+
+// Your existing code to add the renderer to the DOM
 document.getElementById("container3D").appendChild(renderer.domElement);
+
+// Call completeLoading right after adding the renderer to complete the loading process
+completeLoading();
 
 //Set how far the camera will be from the 3D model
 camera.position.z = objToRender === "dino" ? 25 : 500;

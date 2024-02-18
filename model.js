@@ -93,9 +93,6 @@ directionalLight.shadow.camera.near = 0.5;
 directionalLight.shadow.camera.far = 500;
 scene.add(directionalLight);
 
-// Call completeLoading right after adding the renderer to complete the loading process
-completeLoading();
-
 let isMouseDown = false;
 let isDragging = false; // Flag to track dragging
 let lastRotationY = 0; // Initialize to match the model's initial rotation
@@ -115,6 +112,9 @@ document.addEventListener('wheel', (e) => {
 
 let lastMouseX = 0, lastMouseY = 0; // To store the last mouse positions
 let deltaRotationY = 0, deltaRotationX = 0; // To calculate the change in rotation
+
+// Call completeLoading right after adding the renderer to complete the loading process
+completeLoading();
 
 document.onmousedown = (e) => {
   if (e.button === 0) { // Left mouse button

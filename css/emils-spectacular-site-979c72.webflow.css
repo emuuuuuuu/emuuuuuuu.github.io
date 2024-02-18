@@ -118,6 +118,7 @@ li {
 }
 
 img {
+  padding-top: 30px;
   display: block;
 }
 
@@ -953,6 +954,28 @@ figcaption {
   font-weight: 600;
 }
 
+.image-8 {
+  width: 60%;
+  height: 60%;
+  padding-top: 20px;
+}
+
+.image-9 {
+  width: 50%;
+  height: 50%;
+  position: static;
+}
+
+.imagegrid {
+  border-radius: 9px;
+  margin-bottom: 21px;
+  padding-top: 0;
+}
+
+.link-block {
+  margin-bottom: -8px;
+}
+
 @media screen and (min-width: 1920px) {
   .heading-jumbo {
     font-family: Inconsolata, monospace;
@@ -1000,6 +1023,26 @@ figcaption {
     font-family: Inconsolata, monospace;
     font-size: 24px;
     font-weight: 600;
+  }
+
+  .image-grid, .image-wrapper {
+    border-radius: 1px;
+    position: relative;
+  }
+
+  .imagegrid {
+    border-radius: 9px;
+    margin-bottom: 17px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .pintgrid {
+    max-width: 940px;
+    min-width: 600px;
+    column-count: 2;
+    column-rule: 0px none rgba(0, 0, 0, 0);
+    column-gap: 16px;
   }
 }
 
@@ -1541,6 +1584,16 @@ figcaption {
   .list-item, .list-item-2, .list-item-3 {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .image-8, .image-9, .image-10 {
+    position: relative;
+  }
+
+  .imagegrid {
+    border-radius: 9px;
+    margin-bottom: 10px;
+    padding-top: 0;
   }
 }
 

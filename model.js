@@ -81,9 +81,6 @@ function completeLoading() {
 // Your existing code to add the renderer to the DOM
 document.getElementById("container3D").appendChild(renderer.domElement);
 
-// Call completeLoading right after adding the renderer to complete the loading process
-completeLoading();
-
 //Set how far the camera will be from the 3D model
 camera.position.z = objToRender === "dino" ? 25 : 500;
 
@@ -95,6 +92,9 @@ directionalLight.shadow.mapSize.height = 512;
 directionalLight.shadow.camera.near = 0.5;
 directionalLight.shadow.camera.far = 500;
 scene.add(directionalLight);
+
+// Call completeLoading right after adding the renderer to complete the loading process
+completeLoading();
 
 let isMouseDown = false;
 let isDragging = false; // Flag to track dragging

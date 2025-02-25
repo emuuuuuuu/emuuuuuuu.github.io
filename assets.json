@@ -1,27 +1,19 @@
 {
-    "images": ["nixmad.png",
-      "milt.png",
-      "4kfix2.png",
+    "images": ["milt.png",
+      "nixmad.png",
       "al3.png",
-      "dameepic2.png",
-      "hard2.png",
-      "1tiredrose.png",
+      "4kfix2.png",
       "image1.png",
-      "wimage.png",
+      "dameepic2.png",
       "lynch.png",
       "nøkk1.png",
-      "okira2.png",
-      "posesfinal.png",
+      "hard2.png",
+      "wimage.png",
       "spooky2.png",
       "starshit.png",
-      "astøre.png",
-      "ltaran3.png"
+      "posesfinal.png",
+      "1tiredrose.png",
+      "okira2.png"
     ],
-    "videos": [
-      "arussellroom.mp4",
-      "blodgrain11.mp4",
-      "cavetitle3.mp4",
-      "nøkken4.mp4"
-    ],
-    "youtubeLinks": ["m3TX-L7llu8", "KRJ82s8SwgA", "_uNc3hpPjLQ", "oa7neqAMLNs", "47UdkbcgyXY", "RxK85oIKDrc"]
+    "youtubeLinks": ["m3TX-L7llu8", "KRJ82s8SwgA", "_uNc3hpPjLQ", "47UdkbcgyXY", "oa7neqAMLNs"]
   }

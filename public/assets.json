@@ -1,0 +1,14 @@
+{
+    "images": ["nøkk1.png",
+      "milt.png",
+      "jobcrusher_portfolio_grid2.svg",
+      "3nix.png",
+      "4kfix2.png"
+    ],
+    "youtubeLinks": [
+      { "id": "m3TX-L7llu8", "thumbnail": "russel.png" },
+      { "id": "KRJ82s8SwgA", "thumbnail": "stingray.png" },
+      { "id": "YbGuVQF--Wk", "thumbnail": "jobfella.png" },
+      { "id": "47UdkbcgyXY", "thumbnail": "blodstrup.png" }
+    ]
+  }

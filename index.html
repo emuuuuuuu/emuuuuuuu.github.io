@@ -5,6 +5,22 @@
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>emil</title>
+    <script>
+      // Restores the real path that 404.html encoded as ?/path, so BrowserRouter
+      // sees /rag-pipeline rather than /. Must run before the app mounts.
+      (function () {
+        var q = window.location.search;
+        if (q.charAt(1) === '/') {
+          var decoded = q.slice(1).split('&').map(function (part, i) {
+            return i === 0 ? part : '&' + part;
+          }).join('?').replace(/~and~/g, '&');
+          window.history.replaceState(
+            null, null,
+            window.location.pathname.replace(/\/$/, '') + decoded + window.location.hash
+          );
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

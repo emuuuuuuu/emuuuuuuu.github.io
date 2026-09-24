@@ -22,12 +22,8 @@ export default function AnimationGallery() {
                 alt={`Thumbnail for video ${i + 1}`}
                 className="custom-thumbnail"
               />
-              <svg className="play-icon" viewBox="0 0 3 5" shapeRendering="crispEdges" aria-hidden="true">
-                <rect x="0" y="0" width="1" height="1" />
-                <rect x="0" y="1" width="2" height="1" />
-                <rect x="0" y="2" width="3" height="1" />
-                <rect x="0" y="3" width="2" height="1" />
-                <rect x="0" y="4" width="1" height="1" />
+              <svg className="play-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 4.5 20 12 8 19.5Z" vectorEffect="non-scaling-stroke" />
               </svg>
             </div>
           </div>

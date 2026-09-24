@@ -1,15 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=/" />
+    <meta charset="utf-8" />
+    <title>emil</title>
     <script>
-      var path = window.location.pathname;
-      if (path !== "/") {
-        window.location.href = "/" + "#" + path;
-      }
+      // GitHub Pages serves this for any path that isn't a real file. Encode the
+      // requested route into a query string and bounce to the app, which decodes
+      // it back into a real path before React mounts (see index.html).
+      // Without this, deep links like /rag-pipeline land on the home page.
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        '/?/' +
+        l.pathname.slice(1).replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1) : '') +
+        l.hash
+      );
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
